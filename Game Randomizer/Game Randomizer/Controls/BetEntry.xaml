@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="Game_Randomizer.Controls.BetEntry"
+             ColumnDefinitions="Auto,*"
+             RowDefinitions="Auto,Auto"
+             HorizontalOptions="Center"
+             RowSpacing="0"> 
+    <Frame HasShadow="False" Margin="5" Padding="0" HeightRequest="30" WidthRequest="90" CornerRadius="5" BorderColor="{StaticResource GameRandomizerLightGray}">
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <forms:SvgCachedImage
+                   Aspect="AspectFit"
+                   Source="DollarIcon.svg"
+                   DownsampleToViewSize="True"
+                   HeightRequest="15"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   WidthRequest="15"/>
+            <Entry Keyboard="Numeric" FontFamily="GermaltBold" Margin="0,-10,0,-10" HorizontalTextAlignment="Center" Placeholder="1200" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource GameRandomizerGray}"></Entry>
+        </StackLayout>
+    </Frame>
+</Grid>

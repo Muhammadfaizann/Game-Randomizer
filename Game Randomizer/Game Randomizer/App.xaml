@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Game_Randomizer.App">
+    <Application.Resources>
+        <!--  Colors  -->
+        <Color x:Key="GameRandomizerBlack">#000000</Color>
+        <Color x:Key="GameRandomizerWhite">#FFFFFF</Color>
+        <Color x:Key="GameRandomizerRed">#E21A21</Color>
+        <Color x:Key="GameRandomizerLightRed">#FF5957</Color>
+        <Color x:Key="GameRandomizerBlue">#052946</Color>
+
+        <Color x:Key="GameRandomizerGray">#767676</Color>
+        <Color x:Key="GameRandomizerLightGray">#EEEEEE</Color>
+
+        <!--  Buttons  -->
+
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource GameRandomizerRed}" />
+            <Setter Property="TextColor" Value="{StaticResource GameRandomizerWhite}" />
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="Margin" Value="15"/>
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="HeightRequest" Value="200"/>
+            <Setter Property="TextTransform" Value="None" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="FontFamily" Value="GermaltBold" />
+        </Style>
+
+        <Style x:Key="LargeBoldBlueLabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource GameRandomizerBlue}" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="Margin" Value="10,0"/>
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontFamily" Value="GermaltBold" />
+        </Style>
+
+        <Style x:Key="MediumBoldLabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource GameRandomizerGray}" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="FontFamily" Value="GermaltBold" />
+        </Style>
+        <Style x:Key="SmallLabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource GameRandomizerGray}" />
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+            <Setter Property="Margin" Value="10,0"/>
+            <Setter Property="FontSize" Value="Small" />
+        </Style>
+        <Style x:Key="SmallBoldLabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource GameRandomizerGray}" />
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+            <Setter Property="Margin" Value="10,0"/>
+            <Setter Property="FontSize" Value="Small" />
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontFamily" Value="GermaltBold" />
+        </Style>
+    </Application.Resources>
+</Application>

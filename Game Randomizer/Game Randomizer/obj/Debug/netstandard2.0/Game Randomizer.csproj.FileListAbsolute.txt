@@ -1,0 +1,23 @@
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\bin\Debug\netstandard2.0\Game Randomizer.deps.json
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\bin\Debug\netstandard2.0\Game Randomizer.dll
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\bin\Debug\netstandard2.0\ref\Game Randomizer.dll
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\bin\Debug\netstandard2.0\Game Randomizer.pdb
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Game Randomizer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Popups\PopUpPageFromBottom.xaml.g.cs
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Views\AddMatch.xaml.g.cs
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Views\Lose.xaml.g.cs
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Views\MasterPage.xaml.g.cs
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Views\MatchListing.xaml.g.cs
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Views\Win.xaml.g.cs
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Game Randomizer.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Game Randomizer.AssemblyInfo.cs
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Game Randomizer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Game Randomizer.dll
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\ref\Game Randomizer.dll
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Game Randomizer.pdb
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Game Randomizer.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Controls\CollectionItemView.xaml.g.cs
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Controls\BetEntry.xaml.g.cs
+C:\Users\Admin\source\repos\Game Randomizer\Game Randomizer\Game Randomizer\obj\Debug\netstandard2.0\Controls\OddFrame.xaml.g.cs

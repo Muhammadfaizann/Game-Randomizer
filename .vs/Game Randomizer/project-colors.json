@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6cac968e-65bd-4416-84a5-83a9dffeab6c": {
+      "ProjectGuid": "6cac968e-65bd-4416-84a5-83a9dffeab6c",
+      "DisplayName": "Game Randomizer",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "f3222c83-fb08-4a58-8bac-b9a954a1cc97": {
+      "ProjectGuid": "f3222c83-fb08-4a58-8bac-b9a954a1cc97",
+      "DisplayName": "Game Randomizer.Android",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

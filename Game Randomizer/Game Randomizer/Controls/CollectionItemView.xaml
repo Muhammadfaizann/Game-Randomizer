@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Game_Randomizer.Controls.CollectionItemView">
+  <ContentView.Content>
+        <Frame
+        Margin="10"
+        x:Name="frame"
+        CornerRadius="15"
+        VerticalOptions="Center"
+        HeightRequest="60"
+        
+        BorderColor="{StaticResource GameRandomizerLightGray}"
+        HasShadow="True">
+            <Grid 
+            ColumnDefinitions="*,*"
+            VerticalOptions="Center"
+            RowDefinitions="auto,auto">
+                <Label Grid.Column="0" Grid.Row="0" Text="{Binding Team1}" HorizontalTextAlignment="Start" Style="{StaticResource MediumBoldLabelStyle}" TextColor="{StaticResource GameRandomizerGray}">
+                </Label>
+                <Label Grid.Column="0" Grid.Row="1" Text="{Binding Team2}"  HorizontalTextAlignment="Start" Style="{StaticResource MediumBoldLabelStyle}" FontAttributes="Bold" TextColor="{StaticResource GameRandomizerGray}"></Label>
+                <Frame x:Name="frameOdd1" Padding="3" WidthRequest="50" CornerRadius="5" HorizontalOptions="End" Grid.Column="1" Grid.Row="0" BackgroundColor="{StaticResource GameRandomizerLightGray}">
+                    <Label x:Name="textOdd1" HorizontalTextAlignment="Center" Text="{Binding Odd1}" Style="{StaticResource SmallBoldLabelStyle}" TextColor="{StaticResource GameRandomizerBlack}"></Label>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="FrameOdd1_Tapped"></TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame x:Name="frameOdd2" Padding="3" CornerRadius="5" WidthRequest="50"  HorizontalOptions="End" Grid.Column="1" Grid.Row="1"  BackgroundColor="{StaticResource GameRandomizerLightGray}">
+                    <Label x:Name="textOdd2" Text="{Binding Odd2}" HorizontalTextAlignment="Center" Style="{StaticResource SmallBoldLabelStyle}" TextColor="{StaticResource GameRandomizerBlack}"></Label>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="FrameOdd2_Tapped"></TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

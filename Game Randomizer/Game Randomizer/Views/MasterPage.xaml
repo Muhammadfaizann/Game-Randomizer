@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms" xmlns:views="clr-namespace:Game_Randomizer.Views"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard" xmlns:controls="clr-namespace:Game_Randomizer.Controls"
+             x:Class="Game_Randomizer.Views.MasterPage">
+    <ContentPage.Content>
+        <Grid RowDefinitions="100,*">
+            <Frame Grid.Row="0"   BackgroundColor="{StaticResource GameRandomizerBlue}">
+                <StackLayout Orientation="Horizontal">
+                    <forms:SvgCachedImage
+                        x:Name="img"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Aspect="AspectFit"
+                        Source="UserProfileIcon.svg"
+                        DownsampleToViewSize="True"
+                        HeightRequest="50"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        WidthRequest="50"/>
+                    <StackLayout HorizontalOptions="EndAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="coins"  Style="{StaticResource MediumBoldLabelStyle}" TextColor="{StaticResource GameRandomizerWhite}" Text="1500"></Label>
+                            <forms:SvgCachedImage
+                                Aspect="AspectFit"
+                                Source="DollarIcon.svg"
+                                DownsampleToViewSize="True"
+                                HeightRequest="20"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                WidthRequest="20"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <forms:SvgCachedImage
+                                
+                                Aspect="AspectFit"
+                                Source="YellowPlus.svg"
+                                DownsampleToViewSize="True"
+                                HeightRequest="10"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                WidthRequest="10"/>
+                            <forms:SvgCachedImage
+                                
+                                Aspect="AspectFit"
+                                Source="DollarIcon.svg"
+                                DownsampleToViewSize="True"
+                                HeightRequest="15"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                WidthRequest="15"/>
+                            <Label Margin="0" Style="{StaticResource SmallLabelStyle}"  TextColor="{StaticResource GameRandomizerWhite}" >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span x:Name="hours" Text="23" />
+                                        <Span Text=" : " />
+                                        <Span x:Name="mints" Text="55" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Grid 
+                Grid.Row="1"
+                IsVisible="{Binding IsMatchListingVisible}"
+                Margin="0,-10,0,0"    
+                BackgroundColor="{StaticResource GameRandomizerWhite}"
+                RowDefinitions="Auto,100">
+
+                <CollectionView  x:Name="listing" Grid.Row="0" ItemsSource="{Binding MatchesCollection}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <controls:CollectionItemView 
+                                Team1="{Binding Team1}"
+                                Team2="{Binding Team2}"
+                                Odd1="{Binding Odd1}"
+                                Odd2="{Binding Odd2}"/>
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+                    <CollectionView.EmptyView>
+                        <StackLayout
+                        Padding="0"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="StartAndExpand">
+                            <Label
+                            Margin="10"
+                            Text="No matches"
+                            Style="{StaticResource SmallLabelStyle}" />
+                        </StackLayout>
+                    </CollectionView.EmptyView>
+
+                </CollectionView>
+                <Frame Grid.Row="1">
+                    
+                    <Button
+                        x:Name="btnAddMatch"
+                        WidthRequest="60"
+                        HeightRequest="60"
+                        CornerRadius="30"
+                        Text="+"
+                        Command="{Binding ShowAddNewMatchCommand}"
+                        FontAttributes="Bold"
+                        FontSize="30"
+                        TextColor="{StaticResource GameRandomizerWhite}"
+                        HorizontalOptions ="Center"
+                        BackgroundColor   ="{StaticResource GameRandomizerRed}"/>
+                </Frame>
+            </Grid>
+            
+            <Grid Grid.Row="1" IsVisible="{Binding IsAddNewMatchViewVisible}" RowDefinitions="auto,100,*">
+
+                <Frame
+                    Grid.Row="0"
+                    Margin="5"
+                    x:Name="frame"
+                    CornerRadius="15"
+                    HasShadow="True"
+                    VerticalOptions="Center"
+                    HeightRequest="350"
+                    BorderColor="{StaticResource GameRandomizerLightGray}"
+                    >
+                    <StackLayout>
+                        <Label 
+                            Style="{StaticResource LargeBoldBlueLabelStyle}"
+                            Text="Add new match"></Label>
+                        <Grid RowDefinitions="auto,auto,auto">
+                            <StackLayout Grid.Row="0">
+                                <Label 
+                                    Style="{StaticResource SmallBoldLabelStyle}" 
+                                    Text="Sport:"></Label>
+                                    <Frame
+                                            Margin="0"
+                                            Padding="10"
+                                            CornerRadius="5"
+                                            VerticalOptions="Center"
+                                            HeightRequest="40"
+                                            BorderColor="{StaticResource GameRandomizerLightGray}"
+                                            HasShadow="False">
+                                            <combobox:SfComboBox 
+                                                BackgroundColor="Transparent"
+                                                TextColor="{StaticResource GameRandomizerBlack}"  
+                                                x:Name="comboBox" 
+                                                SelectedItem="{Binding SelectedSport}"
+                                                DisplayMemberPath="Name"></combobox:SfComboBox>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout Margin="0,10" Grid.Row="1">
+                                <Label 
+                                    Style="{StaticResource SmallBoldLabelStyle}" 
+                                    Text="Team 1:"></Label>
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame
+                                    Margin="0"
+                                    Padding="10"
+                                    CornerRadius="5"
+                                    VerticalOptions="Center"
+                                    WidthRequest="250"
+                                    HeightRequest="40"
+                                    BorderColor="{StaticResource GameRandomizerLightGray}"
+                                    HasShadow="False">
+                                    <combobox:SfComboBox 
+                                                BackgroundColor="Transparent"
+                                                TextColor="{StaticResource GameRandomizerBlack}"  
+                                                x:Name="team1comboBox" 
+                                                IsEditableMode="True"
+                                                Watermark="Choose team 1"
+                                                SelectedItem="{Binding SelectedTeam1}"
+                                                DisplayMemberPath="Name"></combobox:SfComboBox>
+                </Frame>
+                <forms:SvgCachedImage HeightRequest="40" WidthRequest="40" Source="TeamIcon.svg"></forms:SvgCachedImage>
+                </StackLayout>
+                </StackLayout>
+                            <StackLayout Grid.Row="2">
+                                <Label
+                                    Style="{StaticResource SmallBoldLabelStyle}"
+                                    Text="Team 2:"></Label>
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame
+                                    Margin="0"
+                                    Padding="10"
+                                    CornerRadius="5"
+                                    VerticalOptions="Center"
+                                    WidthRequest="250"
+                                    HeightRequest="40"
+                                    BorderColor="{StaticResource GameRandomizerLightGray}"
+                                    HasShadow="False">
+                                    <combobox:SfComboBox 
+                                                BackgroundColor="Transparent"
+                                                TextColor="{StaticResource GameRandomizerBlack}"  
+                                                x:Name="team2comboBox" 
+                                                IsEditableMode="True"
+                                                Watermark="Choose team 2"
+                                                SelectedItem="{Binding SelectedTeam2}"
+                                                DisplayMemberPath="Name"></combobox:SfComboBox>
+                </Frame>
+                                    <forms:SvgCachedImage HeightRequest="40" WidthRequest="40" Source="TeamIcon.svg"></forms:SvgCachedImage>
+                </StackLayout>
+
+                </StackLayout>
+
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+                    <Button 
+                    Grid.Row="1" 
+                    Command="{Binding SaveNewMatchCommand}"
+                    Style="{StaticResource ButtonStyle}" 
+                    Text="Save this match"/>
+                <Label 
+                    Grid.Row="2"
+                    Style="{StaticResource MediumBoldLabelStyle}"
+                    Text="Cancel">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CancelCommand}"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+
+
+            </Grid>
+
+            <views:Win Grid.Row="1" IsVisible="false"></views:Win>
+            <views:Lose Grid.Row="1" IsVisible="false"></views:Lose>
+            <StackLayout 
+               Grid.Row="1"
+                IsVisible="false"
+                VerticalOptions="EndAndExpand" 
+                HorizontalOptions="FillAndExpand" 
+               >
+                <Frame CornerRadius="20" HorizontalOptions="FillAndExpand" HeightRequest="300" >
+                    <StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand">
+                            <Label  Margin="0,10,0,0" Style="{StaticResource MediumBoldLabelStyle}" Text="Odds:"></Label>
+                            <Frame HasShadow="False"  Padding="3" WidthRequest="50" CornerRadius="5" HorizontalOptions="Center" BackgroundColor="{StaticResource GameRandomizerRed}">
+                                <Label x:Name="textOdd" HorizontalTextAlignment="Center" Style="{StaticResource SmallBoldLabelStyle}" TextColor="{StaticResource GameRandomizerWhite}"></Label>
+                            </Frame>
+                            <Label   Margin="0,10,0,0" Style="{StaticResource MediumBoldLabelStyle}"  Text="Bet:"></Label>
+                            <Frame HasShadow="True" Margin="5" Padding="0" HeightRequest="30" WidthRequest="90" CornerRadius="5" BorderColor="{StaticResource GameRandomizerLightGray}">
+                                <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                                    <forms:SvgCachedImage
+                           Aspect="AspectFit"
+                           Source="DollarIcon.svg"
+                           DownsampleToViewSize="True"
+                           HeightRequest="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           WidthRequest="15"/>
+                                    <Entry x:Name="betEntry" Keyboard="Numeric" FontFamily="GermaltBold" Margin="0,-10,0,-10" HorizontalTextAlignment="Center" Placeholder="1200" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource GameRandomizerGray}"></Entry>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                        <Button  Text="Confirm" Style="{StaticResource ButtonStyle}" HeightRequest="50" Clicked="Confirm_Clicked"  ></Button>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

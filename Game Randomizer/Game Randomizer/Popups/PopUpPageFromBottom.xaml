@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage  
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup" xmlns:controls="clr-namespace:Game_Randomizer.Controls" xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    x:Class="Game_Randomizer.Popups.PopUpPageFromBottom">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Bottom"
+            PositionOut="Bottom"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    
+    <StackLayout 
+                VerticalOptions="EndAndExpand" 
+                HorizontalOptions="FillAndExpand" 
+               >
+        <Frame CornerRadius="20"  HorizontalOptions="FillAndExpand" HeightRequest="300" >
+            <StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand">
+                <Label  Margin="0,10,0,0" Style="{StaticResource MediumBoldLabelStyle}" Text="Odds:"></Label>
+                <Frame HasShadow="False"  Padding="3" WidthRequest="50" CornerRadius="5" HorizontalOptions="Center" BackgroundColor="{StaticResource GameRandomizerRed}">
+                    <Label x:Name="textOdd" HorizontalTextAlignment="Center" Style="{StaticResource SmallBoldLabelStyle}" TextColor="{StaticResource GameRandomizerWhite}"></Label>
+                </Frame>
+                <Label   Margin="0,10,0,0" Style="{StaticResource MediumBoldLabelStyle}"  Text="Bet:"></Label>
+                <Frame HasShadow="True" Margin="5" Padding="0" HeightRequest="30" WidthRequest="90" CornerRadius="5" BorderColor="{StaticResource GameRandomizerLightGray}">
+                    <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                        <forms:SvgCachedImage
+                           Aspect="AspectFit"
+                           Source="DollarIcon.svg"
+                           DownsampleToViewSize="True"
+                           HeightRequest="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           WidthRequest="15"/>
+                        <Entry x:Name="betEntry" Keyboard="Numeric" FontFamily="GermaltBold" Margin="0,-10,0,-10" HorizontalTextAlignment="Center" Placeholder="1200" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource GameRandomizerGray}"></Entry>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+                <Button  Text="Confirm" Style="{StaticResource ButtonStyle}" HeightRequest="50" Clicked="Confirm_Clicked"  ></Button>
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+
+    
+</pages:PopupPage>

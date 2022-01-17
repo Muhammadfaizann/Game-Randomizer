@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Game_Randomizer.Controls.OddFrame"
+             RowDefinitions="auto"
+             ColumnDefinitions="auto">
+             <Frame
+                 HasShadow="False"
+                 Padding="3"
+                 WidthRequest="50"
+                 HeightRequest="20"
+                 CornerRadius="5"
+                 BackgroundColor="{StaticResource GameRandomizerRed}">
+                   <Label 
+                        x:Name="textOdd"
+                        Text="{Binding Odd}"
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource SmallBoldLabelStyle}"
+                        TextColor="{StaticResource GameRandomizerWhite}"/>
+    </Frame>
+
+</Grid>

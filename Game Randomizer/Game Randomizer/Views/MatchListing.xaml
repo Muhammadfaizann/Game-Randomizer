@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Game_Randomizer.Views.MatchListing"
+            BackgroundColor="{StaticResource GameRandomizerWhite}"
+            RowDefinitions="Auto,100">
+                        
+    <CollectionView x:Name="listing" Grid.Row="0" ItemsSource="{Binding MatchList}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame
+                            Margin="5"
+                            x:Name="frame"
+                            CornerRadius="15"
+                            VerticalOptions="Center"
+                            HeightRequest="60"
+                            BorderColor="{StaticResource GameRandomizerLightGray}"
+                            HasShadow="False">
+                    <Grid ColumnDefinitions="*,*"
+                                  RowDefinitions="auto,auto">
+                        <Label Grid.Column="0" Grid.Row="0" Text="Zenit" FontAttributes="Bold" TextColor="{StaticResource GameRandomizerGray}">
+                        </Label>
+                        <Label Grid.Column="0" Grid.Row="1" Text="Spartak" FontAttributes="Bold" TextColor="{StaticResource GameRandomizerGray}"></Label>
+                        <Frame Padding="3" WidthRequest="50" CornerRadius="5" HorizontalOptions="End" Grid.Column="1" Grid.Row="0" BackgroundColor="{StaticResource GameRandomizerLightGray}">
+                            <Label HorizontalTextAlignment="Center" Text="1.9" TextColor="{StaticResource GameRandomizerBlack}"></Label>
+                        </Frame>
+                        <Frame Padding="3" CornerRadius="5" WidthRequest="50"  HorizontalOptions="End" Grid.Column="1" Grid.Row="1"  BackgroundColor="{StaticResource GameRandomizerLightGray}">
+                            <Label Text="2.35" HorizontalTextAlignment="Center" TextColor="{StaticResource GameRandomizerBlack}"></Label>
+                        </Frame>
+                    </Grid>
+                </Frame>
+            </DataTemplate>
+            
+        </CollectionView.ItemTemplate>
+        <CollectionView.EmptyView>
+            <StackLayout
+                        Padding="0"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="StartAndExpand">
+                <Label
+                            Margin="10"
+                            Text="No matches"
+                            TextColor="{StaticResource GameRandomizerGray}" />
+            </StackLayout>
+        </CollectionView.EmptyView>
+        
+    </CollectionView>
+    <Frame Grid.Row="1">
+        <Button
+            x:Name="btnAddMatch"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="30"
+            Text="+"
+            Command="{Binding ShowAddNewMatchCommand}"
+            FontAttributes="Bold"
+            FontSize="30"
+            TextColor="{StaticResource GameRandomizerWhite}"
+            HorizontalOptions ="Center"
+            BackgroundColor   ="{StaticResource GameRandomizerRed}"/>
+    </Frame>
+</Grid>
